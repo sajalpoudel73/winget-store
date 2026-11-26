@@ -1,0 +1,10 @@
+[package]
+name = "winget-core"
+version = "0.1.0"
+edition = "2021"
+description = "Pure-Rust parsers for the output of the winget command line tool"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+unicode-width = "0.2"
+regex = "1"

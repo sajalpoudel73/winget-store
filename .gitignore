@@ -1,0 +1,25 @@
+# JavaScript dependencies and frontend build output
+node_modules/
+dist/
+
+# Rust and Tauri generated output
+target/
+src-tauri/gen/
+
+# Local environment files (keep documented examples shareable)
+.env
+.env.*
+!.env.example
+!.env.sample
+*.local
+
+# Test output and logs
+coverage/
+playwright-report/
+test-results/
+*.log
+npm-debug.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db

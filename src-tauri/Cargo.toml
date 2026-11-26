@@ -1,0 +1,23 @@
+[package]
+name = "winget-store"
+version = "0.1.0"
+description = "A friendly app store UI for winget"
+edition = "2021"
+
+[lib]
+name = "winget_store_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["process", "io-util", "sync", "time", "rt", "macros"] }
+winget-core = { path = "../crates/winget-core" }
+
+[target.'cfg(windows)'.dependencies]
+portable-pty = "0.9"
